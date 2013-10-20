@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131020000141) do
+ActiveRecord::Schema.define(version: 20131020002046) do
 
   create_table "companionships", force: true do |t|
     t.datetime "created_at"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20131020000141) do
   create_table "families", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "companionship_id", default: 0, null: false
   end
 
   create_table "users", force: true do |t|
