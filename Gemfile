@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'haml-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'cancan'
 
 group :development do
   gem 'sqlite3'
