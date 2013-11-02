@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131030171159) do
+ActiveRecord::Schema.define(version: 20131102201854) do
 
   create_table "companionships", force: true do |t|
     t.datetime "created_at"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20131030171159) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "name",                                null: false
+    t.string   "name",                   default: "", null: false
     t.string   "email",                               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
