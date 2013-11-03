@@ -2,7 +2,7 @@
 - base_title = "Home Teaching Coordinator"
 %html
   %head
-    %title= (content_for? :title) ? "#{ yeild :title } | #{ base_title }" : base_title
+    %title= (content_for? :title) ? "#{ yield :title } | #{ base_title }" : base_title
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -20,7 +20,7 @@
     %ul.breadcrumbs
       %li= link_to 'Home', '/'
       - @breadcrumbs.each do |crumb|
-        = link_to crumb.text, crumb.url
+        %li= link_to crumb[:title], crumb[:url]
 
     = yield
 
