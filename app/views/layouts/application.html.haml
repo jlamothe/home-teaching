@@ -17,6 +17,10 @@
       - else
         [ #{ link_to 'Sign In', user_session_path } | #{ link_to 'Register', new_user_registration_path } ]
     %h1= (content_for? :title) ? (yield :title) : base_title
+    %ul.breadcrumbs
+      %li= link_to 'Home', '/'
+      - @breadcrumbs.each do |crumb|
+        = link_to crumb.text, crumb.url
 
     = yield
 
