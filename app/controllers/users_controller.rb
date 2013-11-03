@@ -6,6 +6,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @breadcrumbs << { title: 'Profile', url: user_path(@user.id) }
+    add_breadcrumb 'Profile', user_path(@user.id)
   end
 end
