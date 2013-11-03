@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def init
     @breadcrumbs = []
   end
+
+  def add_breadcrumb(title, url)
+    @breadcrumbs << { title: title, url: url }
+  end
 end
