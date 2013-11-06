@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     @user.name = params[:user][:name]
     @user.email = params[:user][:email]
     @user.save!
+    show
     render 'show'
   end
 end
