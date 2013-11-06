@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    raise CanCan::AccessDenied unless current_user.try(:id) == @user.try(:id)
     add_breadcrumb 'Profile', user_path(@user.id)
   end
 end
