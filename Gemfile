@@ -29,6 +29,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'devise'
 gem 'cancan'
+gem 'simple_form'
 
 group :development do
   gem 'sqlite3'
