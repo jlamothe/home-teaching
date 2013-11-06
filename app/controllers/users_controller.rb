@@ -18,6 +18,9 @@ class UsersController < ApplicationController
   def update
     @user.name = params[:user][:name]
     @user.email = params[:user][:email]
+    if params[:user][:password] != '' && params[:user][:password] == params[:user][:password_confirm]
+      @user.password = params[:user][:password]
+    end
     @user.save!
     show
     render 'show'
