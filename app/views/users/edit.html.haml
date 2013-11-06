@@ -1,0 +1,12 @@
+- content_for :title do
+  Edit User Profile
+
+- if @user
+  = simple_form_for @user do |f|
+    = f.input :name
+    = f.input :email
+    = f.button :submit
+- else
+  User not found.
+
+-# jl
