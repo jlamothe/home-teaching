@@ -2,6 +2,11 @@
   User Profile
 
 - if @user
-  User
+  %div
+    %strong Name:
+    = @user.name
+  %div
+    %strong E-mail:
+    = @user.email
 - else
   User not found.
