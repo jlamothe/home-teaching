@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131106004122) do
+ActiveRecord::Schema.define(version: 20131106005217) do
 
   create_table "companionships", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "emails", force: true do |t|
+    t.string   "email",      null: false
+    t.string   "string",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
