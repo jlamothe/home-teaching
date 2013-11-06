@@ -9,10 +9,10 @@
   %body
     .header
       - if current_user
-        - if current_user.name == ''
-          Welcome!
-        - else
+        - if current_user.name && current_user.name != ''
           Welcome #{ current_user.name }!
+        - else
+          Welcome!
         [ #{ link_to 'Sign Out', destroy_user_session_path, method: :delete } ]
       - else
         [ #{ link_to 'Sign In', user_session_path } | #{ link_to 'Register', new_user_registration_path } ]
