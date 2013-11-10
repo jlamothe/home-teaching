@@ -24,6 +24,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'therubyracer', require: 'v8'
 gem 'haml-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
